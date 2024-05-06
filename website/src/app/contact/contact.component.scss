@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+
+.calendly-inline-widget {
+    width: 500px;
+    height: 369px;
+
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px -2px $surface-mixed-500;
+
+    margin: auto;
+    margin-top: 2rem;
+    vertical-align: center;
+
+    overflow: hidden;
+}
+
+@media screen and (max-width: 430px) {
+    .calendly-inline-widget {
+        width: 85%;
+        height: 369px;
+    }
+}
+
+.email-me {
+    padding: 1rem;
+    text-align: center;
+    color: $text-light;
+}

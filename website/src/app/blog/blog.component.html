@@ -1,0 +1,31 @@
+<div class="blogs-container">
+    <div *ngIf="posts == undefined || posts?.length == 0">
+        <p>No new blog posts. Check back later!</p>
+    </div>
+
+    <div class="blog-card" *ngFor="let blog of posts">
+        <div class="blog-card-header">
+            <div class="header-image">
+                <img src="{{blog.imageurl}}" alt="{{blog.imageurl}}" />
+            </div>
+
+            <div class="header-title">
+                {{ blog.title }}
+                <hr>
+            </div>
+        </div>
+
+        <div class="blog-preview">
+            {{ blog.intro }}
+        </div>
+
+        <div class="read-more-link">
+            <div [routerLink]="['/post', blog.id]">Read More</div>
+        </div>
+    </div>
+
+    <!-- *ngIf="authenticated" -->
+    <div class="new-post">
+
+    </div>
+</div>

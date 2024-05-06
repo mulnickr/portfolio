@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <ul class="navbar-links">
+    <li routerLink="/"><img src="../assets/Avatar.png" width="50px"></li>
+    <li routerLinkActive="active" skipLocationChange routerLink="/resume"><a>About</a></li>
+    <li routerLinkActive="active" skipLocationChange routerLink="/contact"><a>Contact</a></li>
+
+    <li routerLinkActive="active" skipLocationChange routerLink="/blog"><a>Blog</a></li>
+
+    <!--
+    //User Actions (Profile, Login, etc.)
+    //Should only be visible if logged in => <li><a routerLinkActive="active" routerLink="/user">Profile</a></li>
+    //Do I really need a login for my portfolio? Yes! For blog posting
+
+    <li *ngIf="!isLoggedIn" routerLinkActive="active" routerLink="/login"><a>Login</a></li>
+
+    <li *ngIf="isLoggedIn" routerLinkActive="active" routerLink="/logout"><a>Logout</a></li>
+    -->
+
+  </ul>
+</nav>
+
+<main class="main">
+  <router-outlet />
+</main>

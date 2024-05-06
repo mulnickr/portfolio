@@ -1,0 +1,86 @@
+@import "../../styles.scss";
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.login-container {
+    margin: auto;
+
+    top: 35%;
+    transform: translateY(35%);
+
+    padding: 1rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px -5px $surface-mixed-100;
+
+    width: 30%;
+
+    background-color: $surface-300;
+    color: $text-light;
+}
+
+@media screen and (max-width: 450px) {
+    .login-container {
+        width: 75%;
+    }
+}
+
+.login {
+    font-weight: bold;
+    font-size: 18px;
+
+    user-select: none;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.login-container label {
+    text-align: left;
+    user-select: none;
+}
+
+input {
+    margin-top: -0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.login-container button {
+    border-style: none;
+    border-radius: 5px;
+    background-color: $surface-mixed-200;
+    color: $text-light;
+
+    padding: 0.75rem;
+}
+
+.login-container button:hover {
+    background-color: $surface-mixed-400;
+    cursor: pointer;
+}
+
+// register and 'forgot password' links
+.login-container a {
+    font-weight: bold;
+    text-decoration: none;
+    user-select: none;
+}
+
+.login-container a:hover {
+    color: lighten(black, 25);
+}

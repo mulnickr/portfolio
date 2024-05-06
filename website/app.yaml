@@ -1,0 +1,16 @@
+runtime: nodejs20
+
+instance_class: F2
+
+handlers:
+  - url: /
+    static_files: dist/website/browser/index.html
+    upload: dist/website/browser/index.html
+
+  - url: /
+    static_dir: dist/website/browser
+
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    script: auto

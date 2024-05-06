@@ -1,0 +1,44 @@
+<div class="wrapper">
+    <div *ngIf="post" class="page-container">
+
+        <div *ngIf="isLoggedIn" class="controls-container">
+            <div *ngIf="editing || initialBody != post.body" class="control-button" (click)="onUpdate()">Update</div>
+            <div *ngIf="!editing" class="control-button" (click)="onEdit()">Edit</div>
+            <div *ngIf="editing" class="control-button" (click)="onView()">View</div>
+            <div class="control-button" (click)="onDelete()">Delete</div>
+        </div>
+
+        <div *ngIf="post" class="blog-container">
+            <div *ngIf="!editing" class="blog-image">
+                <img src="{{post.imageurl}}" alt="image" />
+            </div>
+
+            <div *ngIf="editing" class="editing-container">
+                <label>Image: </label>
+                <input type="text" class="editing-image" [value]="post!.imageurl" (input)="onImageChange($event)">
+            </div>
+
+            <div *ngIf="editing" class="editing-container">
+                <label>Title:</label>
+                <input *ngIf="editing" type="text" class="editing-blog-title" [value]="post.title"
+                    (input)="onTitleChange($event)">
+            </div>
+
+            <div *ngIf="!editing" class="blog-title">
+                {{post!.title}}
+            </div>
+
+            <hr>
+
+            <div *ngIf="!editing" class="blog-body">
+                <markdown [data]="post.body"></markdown>
+            </div>
+
+            <div *ngIf="editing" class="editing-container">
+                <label>Body:</label>
+                <textarea *ngIf="editing" class="edit-blog-body" [value]="post.body"
+                    (input)="onBodyChange($event)"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+// below: my CSS code
+@import "../styles.scss";
+
+.main {
+    margin: auto;
+    padding: 0;
+
+    width: 70%;
+    height: 100%;
+}
+
+.navbar {
+    color: $text-primary-light;
+    //background: $surface-300;
+
+    border-radius: 0 0 10px 10px;
+
+    width: 50%;
+
+    margin: auto;
+    padding: 1rem;
+
+    text-align: center;
+
+    z-index: 10000;
+}
+
+@media screen and (max-width: 430px) {
+    .navbar {
+        position: fixed;
+        bottom: 0;
+
+        // center???
+    }
+}
+
+.active {
+    color: $text-light;
+    background: $surface-mixed-100;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    align-items: center;
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbar-links a {
+    text-decoration: none;
+}
+
+.navbar-links li {
+    // display: inline-block;
+    padding: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 8px;
+
+    margin: auto;
+    cursor: pointer;
+}
+
+.navbar-links li:first-child {
+    padding: 0;
+    border-radius: 50%;
+}
+
+img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.navbar-links li:not(.active):not(:first-child):hover {
+    background-color: $surface-mixed-300;
+    color: $text-light;
+}
+
+/*
+ .navbar-links li:last-child {
+    float: right;
+} 
+*/
