@@ -16,26 +16,20 @@
 }
 
 .resume-container {
-    justify-self: center;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 1rem;
 
     border-radius: 10px;
-    box-shadow: 5px 5px 10px -2px $surface-mixed-500;
+    box-shadow: 5px 5px 10px -2px $shadow-100;
 
-    max-width: 75%;
+    max-width: 70%;
 
-    padding-top: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 
-    background-color: rgb(243, 243, 243);
+    background-color: rgba(255, 255, 255, 0.863);
 }
 
 .title-container {

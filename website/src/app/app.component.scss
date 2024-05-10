@@ -59,15 +59,15 @@
 .navbar-links li {
     // display: inline-block;
     padding: 0.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
     border-radius: 8px;
 
     margin: auto;
     cursor: pointer;
 }
 
-.navbar-links li:first-child {
+.navbar-links li:nth-child(2) {
     padding: 0;
     border-radius: 50%;
 }
@@ -78,7 +78,7 @@ img {
 }
 
 
-.navbar-links li:not(.active):not(:first-child):hover {
+.navbar-links li:not(.active):not(:nth-child(2)):hover {
     background-color: $surface-mixed-300;
     color: $text-light;
 }
